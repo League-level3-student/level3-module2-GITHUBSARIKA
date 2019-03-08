@@ -53,16 +53,35 @@ class _01_SwappingDigits {
 
 			}
 		}
-		for (int i = 0; i < arr.length; i++) {
+		
+			 
+		while(_00_SortedArrayChecker.intArraySorted(arr)==false) {
+			for (int i = 0; i < arr.length - 1; i++) {
+				if (arr[i + 1] < arr[i]) {
+					int x = arr[i];
+					arr[i] = arr[i + 1];
+					arr[i + 1] = x;
 
+				}
+			}
 		}
 
 	}
 
-	// 3. Complete the method so that it finds the middle number in the array.
+	// 3. Complete the method so that it return the middle number in the array.
 	// *Hint* it helps to sort it first.
 	// *Double Hint* Use the method you already wrote in step 2 to sort it
 	public static int findMiddle(int[] arr) {
-		return 0;
+		while(_00_SortedArrayChecker.intArraySorted(arr)==false) {
+			for (int i = 0; i < arr.length - 1; i++) {
+				if (arr[i + 1] < arr[i]) {
+					int x = arr[i];
+					arr[i] = arr[i + 1];
+					arr[i + 1] = x;
+
+				}
+			}
+		}
+		return arr[arr.length/2];
 	}
 }
