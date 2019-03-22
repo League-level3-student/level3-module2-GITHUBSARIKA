@@ -8,12 +8,19 @@ import javax.swing.JOptionPane;
  * Then complete the steps in the classes in the following order:
  * 
  * BubbleSorter
+ * done
  * SelectionSorter
+ *done
  * InsertionSorter
+ * done
  * QuickSorter
+ * done
  * MergeSorter
+ * done
  * HeapSorter
+ * done
  * BogoSorter
+ * done
  */
 
 public class _02_SortingAlgorithms {
