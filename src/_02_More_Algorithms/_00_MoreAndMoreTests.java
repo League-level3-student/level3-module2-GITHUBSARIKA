@@ -18,7 +18,7 @@ public class _00_MoreAndMoreTests {
 	    assertEquals("8 x 11 = 88", multiply(8, 11));
 	  }
 	String multiply(int num1, int num2) {
-		String number=num1 + "  x  " + num2 + " = " + num1*num2;
+		String number=num1 + " x " + num2 + " = " + num1*num2;
 		return number;
 		
 	}
@@ -32,11 +32,16 @@ public class _00_MoreAndMoreTests {
 	    assertFalse(isPrime(4));
 	    assertFalse(isPrime(12));
 	    assertFalse(isPrime(527));
-         boolean isPrime(int num) {
-        	 
-         }
+         
 	  }
-
+boolean isPrime(int num) {
+        	 for (int i = 2; i < num-1; i++) {
+				if(num%i==0) {
+					return false;
+				}
+			}
+        	 return true;
+         }
 	@Test
 	  public void SquareTest() {
 
@@ -50,6 +55,16 @@ public class _00_MoreAndMoreTests {
 	    assertFalse(isSquare(143));
 
 	  }
+	
+	boolean isSquare(int num) {
+		for (int i = 0; i <= num; i++) {
+			if(i*i==num) {
+			return true;
+		}
+		}
+		
+		return false;
+	}
 
 	@Test
 	  public void CubeTest() {
@@ -63,6 +78,15 @@ public class _00_MoreAndMoreTests {
 	    assertFalse(isCube(143));
 
 	  }
+	boolean isCube(int numm) {
+		for (int i = 0; i <= numm; i++) {
+			if(i*i*i==numm) {
+			return true;
+		}
+		}
+		
+		return false;
+	}
 
 
 
