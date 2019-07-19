@@ -23,10 +23,37 @@ public class Algorithms {
 		return x;
 	}
 	public static double findTallest(List<Double>peeps) {
+		double longest=peeps.get(0);
 		for (int i = 0; i < peeps.size(); i++) {
-			
+			if(peeps.get(i)>longest) {
+				longest=peeps.get(i);
+				
+			}
 		}
+		return longest;
 	}
 	
+	public static String findLongestWord(List<String>words) {
+	String longestWord=words.get(0);
+	for (int i = 0; i < words.size(); i++) {
+		if(words.get(i).length()>longestWord.length()) {
+			longestWord=words.get(i);
+		}
+	}
+	return longestWord;
+		
+	}
+	
+	public static boolean containsSOS(List<String>sos) {
+		for (int i = 0; i < sos.size(); i++) {
+			if (sos.get(i).contains("... --- ...")) {
+				return true;
+			}
+		}
+		return false;
+	}
+	public static double sortScores(List<Double>score) {
+		
+	}
 }
 
